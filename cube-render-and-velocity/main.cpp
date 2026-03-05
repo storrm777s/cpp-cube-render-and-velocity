@@ -104,11 +104,11 @@ void Tick(float dt) {
             rect.rotation += rect.rotationvelocity;
 
             for (int i = 0; i < 5; i++) {
-            float dx = rect.pos.points[i].x - rect.center.x;
-            float dy = rect.pos.points[i].y - rect.center.y;
+                float dx = rect.pos.points[i].x - rect.center.x;
+                float dy = rect.pos.points[i].y - rect.center.y;
 
-            rect.pos.points[i].x = dx * cos(rect.rotationvelocity) - dy * sin(rect.rotationvelocity) + rect.center.x;
-            rect.pos.points[i].y = dx * sin(rect.rotationvelocity) + dy * cos(rect.rotationvelocity) + rect.center.y;
+                rect.pos.points[i].x = dx * cos(rect.rotationvelocity) - dy * sin(rect.rotationvelocity) + rect.center.x;
+                rect.pos.points[i].y = dx * sin(rect.rotationvelocity) + dy * cos(rect.rotationvelocity) + rect.center.y;
             }
 
             //float dxn = dx * cos(rect.rotation) - dy * sin(rect.rotation);
